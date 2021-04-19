@@ -14,6 +14,9 @@
 </head>
 <body>
 <div class="container center mt-5">
+<div class ="row">
+<div class="col">
+<p class="text-success"><c:out value="${please}" /></p>
  <h1>Register!</h1>
     
     <p><form:errors path="user.*"/></p>
@@ -41,9 +44,23 @@
         </p>
         <input class="btn btn-success mt-3" type="submit" value="Register!"/>
     </form:form>
-    
+</div>
 
-
+<div class ="col">
+<h1>Login</h1>
+    <p><c:out value="${error}" /></p>
+    <form method="post" action="/login">
+        <p>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email"/>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"/>
+        </p>
+        <input class="btn btn-primary mt-3" type="submit" value="Login!"/>
+    </form>    
+</div>
 </div>
 
 </body>
